@@ -254,11 +254,4 @@ defmodule RetWeb.Router do
 
     get "/*path", PageController, only: [:index]
   end
-  
-  scope "/api/postgrest" do
-    if(Mix.env() == :prod) do
-      pipe_through([:secure_headers])
-    end
-    forward("/", RetWeb.Plugs.PostgrestProxy)
-  end
 end
