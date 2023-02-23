@@ -87,7 +87,6 @@ defmodule Ret.Mixfile do
       {:oauther, "~> 1.1"},
       {:jason, "~> 1.1"},
       {:jose, "~> 1.8"},
-      {:jose_jwk, ">0.1"},
       {:ex_rated, "~> 2.1.0"},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:ex_json_schema, "~> 0.7.3"},
