@@ -141,7 +141,7 @@ config :ret, Ret.Speelycaptor, speelycaptor_endpoint: "https://1dhaogh2hd.execut
 
 config :ret, Ret.Storage,
   host: "https://#{host}",
-  storage_path: "/root/hubsr/reticulum/_work/reticulum/reticulum/storage",
+  storage_path: "/root/hubsr/reticulum/storage",
   ttl: 60 * 60 * 24
 
 asset_hosts =
