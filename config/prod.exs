@@ -172,7 +172,7 @@ config :ret, Ret.Mailer,
   port: 465,
   username: "307840440@qq.com",
   password: "kjbmcggtogrwcaid",
-  tls: always, # can be `:always` or `:never`
+  tls: :always, # can be `:always` or `:never`
   ssl: true, # can be `true`
   retries: 1
 
