@@ -176,7 +176,7 @@ config :ret, Ret.Mailer,
   ssl: true, # can be `true`
   retries: 1
 
-config :ret, RetWeb.Email, from: "info@hubs-mail.com"
+config :ret, RetWeb.Email, from: "307840440@qq.com"
 
 # config :ret, Ret.PermsToken, perms_key: (System.get_env("PERMS_KEY") || "") |> String.replace("\\n", "\n")
 
