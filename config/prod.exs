@@ -167,12 +167,12 @@ config :ret, RetWeb.Plugs.AddCSP,
   manifest_src: asset_hosts
 
 config :ret, Ret.Mailer,
-  adapter: Bamboo.LocalAdapter,
+  adapter: Bamboo.SMTPAdapter,
   server: "smtp.qq.com",
   port: 465,
   username: "307840440@qq.com",
   password: "kjbmcggtogrwcaid",
-  tls: true, # can be `:always` or `:never`
+  tls: always, # can be `:always` or `:never`
   ssl: true, # can be `true`
   retries: 1
 
