@@ -127,6 +127,7 @@ defmodule RetWeb.Plugs.AddCSP do
       ],
       "script-src" => [
         "'self'",
+        "'unsafe-inline'",
         "blob:",
         "'sha256-/S6PM16MxkmUT7zJN2lkEKFgvXR7yL4Z8PCrRrFu4Q8='",
         "'sha256-MIpWPgYj31kCgSUFc0UwHGQrV87W6N5ozotqfxxQG0w='",
@@ -144,7 +145,8 @@ defmodule RetWeb.Plugs.AddCSP do
         "https://www.youtube.com",
         assets_url,
         custom_rules[:script_src],
-        storage_url
+        storage_url,
+        "https://hm.baidu.com"
       ],
       "child-src" => [
         "'self'",
@@ -188,6 +190,7 @@ defmodule RetWeb.Plugs.AddCSP do
         "https://cdn.aframe.io",
         "https://dpdb.webvr.rocks",
         "https://www.google-analytics.com",
+        "https://hm.baidu.com",
         "https://www.youtube.com",
         "https://fonts.gstatic.com",
         assets_url,
@@ -206,6 +209,7 @@ defmodule RetWeb.Plugs.AddCSP do
         "https://cdn.jsdelivr.net",
         "https://user-images.githubusercontent.com",
         "https://www.google-analytics.com",
+        "https://hm.baidu.com",
         "https://www.youtube.com",
         assets_url,
         cors_proxy_url,

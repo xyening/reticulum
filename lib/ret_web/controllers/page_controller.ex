@@ -229,11 +229,6 @@ defmodule RetWeb.PageController do
   def render_for_path("/cloud", _params, conn), do: conn |> render_page("cloud.html")
   def render_for_path("/cloud/", _params, conn), do: conn |> render_page("cloud.html")
 
-  def render_for_path("/spoke", _params, conn),
-    do: conn |> render_page("index.html", :spoke, "spoke-index-meta.html")
-
-  def render_for_path("/spoke/" <> _path, _params, conn),
-    do: conn |> render_page("index.html", :spoke, "spoke-index-meta.html")
 
   def render_for_path("/whats-new", _params, conn),
     do: conn |> render_page("whats-new.html", :hubs, "whats-new-meta.html")
@@ -428,7 +423,7 @@ defmodule RetWeb.PageController do
   end
 
   def render_hub_content(conn, nil, _) do
-    user_agent = 
+    user_agent =
       get_req_header(conn, "user-agent")
       |> Enum.at(0)
     if String.contains?(user_agent, "kube-probe") do
