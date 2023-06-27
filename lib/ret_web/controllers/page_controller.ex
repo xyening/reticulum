@@ -229,6 +229,11 @@ defmodule RetWeb.PageController do
   def render_for_path("/cloud", _params, conn), do: conn |> render_page("cloud.html")
   def render_for_path("/cloud/", _params, conn), do: conn |> render_page("cloud.html")
 
+  def render_for_path("/editor", _params, conn),
+    do: conn |> render_page("index.html", :spoke, "spoke-index-meta.html")
+
+  def render_for_path("/editor/" <> _path, _params, conn),
+    do: conn |> render_page("index.html", :spoke, "spoke-index-meta.html")
 
   def render_for_path("/whats-new", _params, conn),
     do: conn |> render_page("whats-new.html", :hubs, "whats-new-meta.html")

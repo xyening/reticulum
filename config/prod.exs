@@ -2,7 +2,7 @@ use Mix.Config
 
 # NOTE: this file contains some security keys/certs that are *not* secrets, and are only used for local development purposes.
 
-host = "hubs.szcxkj.com"
+host = "www.wan9.xyz"
 cors_proxy_host = "hubs-proxy.local"
 assets_host = "hubs-assets.local"
 link_host = "hubs-link.local"
@@ -168,10 +168,10 @@ config :ret, RetWeb.Plugs.AddCSP,
 
 config :ret, Ret.Mailer,
   adapter: Bamboo.SMTPAdapter,
-  server: "smtp.qq.com",
+  server: "smtp.exmail.qq.com",
   port: 465,
-  username: "307840440@qq.com",
-  password: "kjbmcggtogrwcaid",
+  username: "contact@wan9.xyz",
+  password: "123789",
   tls: :never, # can be `:always` or `:never`
   ssl: true, # can be `true`
   retries: 1

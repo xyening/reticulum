@@ -119,7 +119,7 @@ defmodule RetWeb.Plugs.AddCSP do
 
     %{
       "default-src" => [
-        "'none'"
+         "'self'"
       ],
       "manifest-src" => [
         "'self'",
@@ -143,6 +143,8 @@ defmodule RetWeb.Plugs.AddCSP do
         "https://ssl.google-analytics.com",
         "https://www.google-analytics.com",
         "https://www.youtube.com",
+        "https://www.wan9.xyz:9090",
+        "https://www.wan9.xyz:8080",
         assets_url,
         custom_rules[:script_src],
         storage_url,
@@ -176,6 +178,8 @@ defmodule RetWeb.Plugs.AddCSP do
         "'unsafe-inline'",
         "https://cdn.jsdelivr.net",
         "https://fonts.googleapis.com",
+        "https://www.wan9.xyz:9090",
+        "https://www.wan9.xyz:8080",
         assets_url,
         cors_proxy_url,
         custom_rules[:style_src],
@@ -193,6 +197,10 @@ defmodule RetWeb.Plugs.AddCSP do
         "https://hm.baidu.com",
         "https://www.youtube.com",
         "https://fonts.gstatic.com",
+        "https://sketchfab.com",
+        "https://uploads-prod.reticulum.io",
+        "https://www.wan9.xyz:9090",
+        "https://www.wan9.xyz:8080",
         assets_url,
         cors_proxy_url,
         custom_rules[:connect_src],
